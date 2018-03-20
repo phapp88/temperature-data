@@ -4,21 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^3.0.6",
+    "postcss-loader": "^2.1.1",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "d3": "^4.13.0"
