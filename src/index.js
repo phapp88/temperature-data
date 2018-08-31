@@ -110,7 +110,16 @@ legend.append('rect')
   .style('fill', d => d);
 
 legend.append('text')
-  .attr('x', 6)
+  .attr('x', (d) => {
+    const text = String(Math.floor(color.invertExtent(d)[0] * 10) / 10);
+    if (text.length === 1) {
+      return 12;
+    }
+    if (text.length === 3) {
+      return 5;
+    }
+    return 0;
+  })
   .attr('y', 35)
   .attr('dy', '.35em')
   .text(d => Math.floor(color.invertExtent(d)[0] * 10) / 10);

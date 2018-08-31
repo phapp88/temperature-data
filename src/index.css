@@ -9,6 +9,7 @@
 
 body {
   background-color: Gainsboro;
+  font-family: sans-serif;
 }
 
 #chart {
@@ -21,7 +22,7 @@ body {
 }
 
 h1, h2, p {
-  margin: 0;
+  margin: 2.5px auto;
 }
 
 .monthLabel {
